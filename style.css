@@ -1,0 +1,61 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, #8e44ad, #c0392b);
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180vh;
+}
+
+.search-container input {
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+
+  width: 30vw;
+  height: 3vw;
+  padding-left: 10px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+.search-container .searchBar {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.search-container .suggestions {
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+
+input:focus {
+  outline: none; /*remove outline of input box */
+}
+
+.search-container input[type="text"]:focus + .suggestions {
+  display: block; /* Show the suggestions only when the input is focused */
+}
+
+ul {
+  padding-left: 0;
+  background-color: rgba(255, 80, 156, 0.467);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+  padding-top: 4px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+}
+
+ul li.has-suggestions {
+  background-color: coral;
+}
